@@ -1,24 +1,25 @@
 # WrapCExample
 
-TODO: Write a gem description
+Ruby wrapper for C example
 
 ## Installation
 
-Add this line to your application's Gemfile:
+	git clone https://github.com/IDme/wrap_c_example
+	cd wrap_c_example
+	rake build
+	gem install pkg/wrap_c_example-0.0.1.gem
+	
 
-    gem 'wrap_c_example'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install wrap_c_example
 
 ## Usage
 
-TODO: Write usage instructions here
+	$ pry
+	[1] pry(main)> require "wrap_c_example"
+	=> true
+	[2] pry(main)> g = WrapCExample::Greeting.new("Zac")
+	=> #<WrapCExample::Greeting:0x007fc36d217e50 @name="Zac">
+	[3] pry(main)> g.hello
+	=> "Hello Zac! How are you?"
 
 ## Contributing
 
