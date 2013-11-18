@@ -6,8 +6,14 @@ static VALUE rb_cGreeting;
 
 static VALUE
 greeting_hello(VALUE self) {
+  /*
+   * Setup for function located in ../../static_libs/hello_user.c
+   */
   char *  greeting(char *);
 
+  /*
+   * return a string VALUE from a char * that ruby can handle and assign to variables
+   */
   return rb_str_new2(greeting(RSTRING_PTR(rb_iv_get(self, "@name"))));
 }
 
